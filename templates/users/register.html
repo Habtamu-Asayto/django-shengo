@@ -1,0 +1,23 @@
+{% extends "base2.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group"> 
+                <legend class="border-bottom mb-4">
+                    {% translate "sign-Here" %}
+                </legend>
+                {{ form|crispy }}
+            </fieldset>
+
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">{% translate "sign-Here" %}</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted"> {% translate "Have-A" %}<a href="{% url 'login' %}" class="ml-2">{% translate "login-nav" %}</a></small>
+        </div>
+    </div>
+{% endblock content %}

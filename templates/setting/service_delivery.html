@@ -1,0 +1,121 @@
+
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <h5 class="card-title">{% translate "sidebar-deliveryo" %}</h5>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="#addServiceModal" style="margin-left: 7%;" class="btn btn-success" data-toggle="modal"> <span>{% translate "text-addnew-service" %}</span></a>
+                        </div>
+                    </div> 
+                    <hr>
+                    <div class="table-responsive">
+                        <table id="zero_config" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>{% translate "textheader-name" %}</th>
+                                    <th>{% translate "textheader-phone" %}</th> 
+                                    <th>{% translate "textheader-region" %}</th>
+                                    <th>{% translate "textheader-zone" %}</th>
+                                    <th>{% translate "textheader-woreda" %}</th>
+                                    <th>{% translate "textheader-description" %}</th>
+                                    <th>{% translate "textheader-action" %}</th> 
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for s in services %}
+                            <tr>
+                                <td>{{s.name}}</td>
+                                <td>{{s.phone}}</td>
+                                <td>{{s.region}}</td>
+                                <td>{{s.zone}}</td>
+                                <td>{{s.woreda}}</td>
+                                <td>{{s.description}}</td>
+                                <td>
+                                    <a href="#editEmployeeModal-{{forloop.counter}}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                    <a href="#deleteEmployeeModal-{{forloop.counter}}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                </td>
+                                
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                            
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Add Modal HTML -->
+	<div id="addServiceModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				
+                <form action="{% url 'insert' %}" method="POST">
+					{% csrf_token %}
+					<div class="modal-header">						
+						<h4 class="modal-title">{% translate "text-add-service" %}</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+
+					<div class="modal-body">
+                       
+                        <div class="form-group">
+							<label>{% translate "text-delivery-service" %}</label>
+							<input name="name" type="text" class="form-control" required>
+						</div>	
+
+                        <div class="form-group">
+							<label>{% translate "textheader-phone" %}</label>
+							<input name="phone" type="text" class="form-control" required>
+						</div>	
+                        
+                        <div class="form-group">
+							<label>{% translate "textheader-description" %}</label>
+							<textarea name="description" type="text" class="form-control"></textarea>
+						</div> 	
+                         			
+						<div class="form-group"> 
+                            <label id="id_region">{% translate "textheader-region" %}</label>
+                            <select  id="id_region" class="custom-select mb-4" name="reg" hx-get="{% url 'zone' %}" hx-trigger='change' hx-target='#zone'>
+                                <option selected>--------{% translate "text-select-region" %}---------</option>
+                                {% for r in reg %}
+                                    <option value="{{r.pk}}">{{ r.name }}</option>
+                                {% endfor %}
+                            </select> 
+						</div> 
+						<div class="form-group" style="margin-top: -5%;">
+                            <label  id="id_zone">{% translate "textheader-zone" %}</label>
+							<div id="zone">
+                                {% include 'setting/partials/zone.html' %}
+                            </div>
+						</div> 	
+						<div class="form-group" style="margin-top: -5%;">
+                            <label  id="id_woreda">{% translate "textheader-woreda" %}</label>
+							<div id="woreda"> 
+                                {% include 'setting/partials/woreda.html' %}
+                            </div>
+						</div> 				
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="{% translate 'text-cancel' %}">
+						<input type="submit" class="btn btn-success" value="{% translate 'text-add' %}">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</div>
+{% endblock content %}

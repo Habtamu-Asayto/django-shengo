@@ -1,0 +1,45 @@
+{% load i18n %}
+{% load static %}
+
+  <aside class="left-sidebar scrollable ps-container ps-theme-default ps-active-y" data-sidebarbg="skin5">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar"> 
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav"  class="p-t-30">
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{% url 'dashboard' %}" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">{% translate "sidebar-dash" %}</span></a></li>
+                     
+                        <li class="sidebar-item"> 
+                            <a class="sidebar-link has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-shopping"></i><span class="hide-menu">{% translate "sidebar-sales" %}</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="{% url 'sale-vehicle' %}" class="sidebar-link"><i class="mdi mdi-city"></i><span class="hide-menu"> Vehicle </span></a></li>    
+                            </ul>
+                        </li>
+
+                        
+                        <li class="sidebar-item"> 
+                            <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-gift"></i><span class="hide-menu">{% translate "sidebar-gifts" %} </span></a>
+                            
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="{% url 'gift-vehicle' %}" class="sidebar-link"><i class="mdi mdi-city"></i><span class="hide-menu"> Vehicle </span></a></li>    
+                            </ul>
+                        </li>
+                        
+                        
+                        <li class="sidebar-item"> 
+                            <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-settings"></i><span class="hide-menu">{% translate "sidebar-setting" %} </span></a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="{% url 'nations' %}" class="sidebar-link"><i class="mdi mdi-city"></i><span class="hide-menu"> {% translate "sidebar-nation" %} </span></a></li>
+                                <li class="sidebar-item"><a href="{% url 'region' %}" class="sidebar-link"><i class="mdi mdi-security-home"></i><span class="hide-menu"> {% translate "sidebar-region" %} </span></a></li>
+                                <li class="sidebar-item"><a href="{% url 'zons' %}" class="sidebar-link"><i class="mdi mdi-security-home"></i><span class="hide-menu"> {% translate "sidebar-zone" %} </span></a></li>
+                                <li class="sidebar-item"><a href="{% url 'wored' %}" class="sidebar-link"><i class="mdi mdi-security-home"></i><span class="hide-menu"> {% translate "sidebar-woreda" %} </span></a></li>
+                                <li class="sidebar-item"><a href="{% url 'serv' %}" class="sidebar-link"><i class="mdi mdi-security-home"></i><span class="hide-menu"> {% translate "sidebar-service" %} </span></a></li>    
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation --> 
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>

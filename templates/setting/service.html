@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<select class="custom-select mb-4" name="nation" hx-get="{% url 'regs' %}" hx-trigger='change' hx-target='#regs'>
+    <option selected>Open this menu</option>
+    {% for n in nations %}
+    <option value="{{n.pk}}">{{ n.name }}</option>
+    {% endfor %}
+</select>
+
+<div id="regs">
+    {% include 'setting/partials/region.html' %}
+</div>
+{% endblock %}
+  
+    
+    

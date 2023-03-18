@@ -1,0 +1,7 @@
+{% load i18n %}
+<select class="custom-select mb-4" name="zon" id="id_zone" hx-get="{% url 'woreda' %}" hx-trigger='change' hx-target='#woreda'>
+    <option selected>--------{% translate "text-select-zone" %}-------------</option>
+    {% for r in zone %}
+        <option value="{{r.pk}}">{{ r.name }}</option>
+    {% endfor %}
+</select> 

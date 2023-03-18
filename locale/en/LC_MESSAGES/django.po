@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-18 13:38+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\dashboard\views.py:23 .\templates\dashboard\includes\sidebar.html:10
+msgid "sidebar-dash"
+msgstr "Dashboard"
+
+#: .\dashboard\views.py:24 .\templates\dashboard\includes\sidebar.html:30
+msgid "sidebar-setting"
+msgstr "Setting"
+
+#: .\dashboard\views.py:25 .\templates\dashboard\includes\sidebar.html:32
+msgid "sidebar-nation"
+msgstr "Nationality"
+
+#: .\dashboard\views.py:26 .\templates\dashboard\includes\sidebar.html:33
+msgid "sidebar-region"
+msgstr "Region"
+
+#: .\dashboard\views.py:27 .\templates\dashboard\includes\sidebar.html:34
+msgid "sidebar-zone"
+msgstr "Zone"
+
+#: .\dashboard\views.py:28 .\templates\dashboard\includes\sidebar.html:35
+msgid "sidebar-woreda"
+msgstr "Woreda"
+
+#: .\dashboard\views.py:29 .\templates\dashboard\includes\sidebar.html:36
+msgid "sidebar-service"
+msgstr "Service delivery office"
+
+#: .\dashboard\views.py:30
+msgid "sidebar-type"
+msgstr "Witness case type"
+
+#: .\dashboard\views.py:31 .\templates\dashboard\includes\header.html:161
+msgid "sidebar-profile"
+msgstr "My Profile"
+
+#: .\dashboard\views.py:32 .\templates\dashboard\includes\header.html:163
+msgid "sidebar-account"
+msgstr "Account setting"
+
+#: .\dashboard\views.py:33 .\templates\dashboard\includes\header.html:165
+msgid "sidebar-logout"
+msgstr "Logout"
+
+#: .\setting\views.py:52 .\templates\setting\service_delivery.html:13
+msgid "sidebar-deliveryo"
+msgstr "Service delivery office lists"
+
+#: .\setting\views.py:53 .\templates\setting\service_delivery.html:16
+msgid "text-addnew-service"
+msgstr "Add new service delivery office"
+
+#: .\setting\views.py:54 .\templates\setting\service_delivery.html:24
+msgid "textheader-name"
+msgstr "Service delivery office"
+
+#: .\setting\views.py:55 .\templates\setting\service_delivery.html:25
+#: .\templates\setting\service_delivery.html:80
+msgid "textheader-phone"
+msgstr "Phone"
+
+#: .\setting\views.py:56 .\templates\setting\service_delivery.html:26
+#: .\templates\setting\service_delivery.html:90
+msgid "textheader-region"
+msgstr "Region"
+
+#: .\setting\views.py:57 .\templates\setting\service_delivery.html:27
+#: .\templates\setting\service_delivery.html:99
+msgid "textheader-zone"
+msgstr "Zone"
+
+#: .\setting\views.py:58 .\templates\setting\service_delivery.html:28
+#: .\templates\setting\service_delivery.html:105
+msgid "textheader-woreda"
+msgstr "Woreda"
+
+#: .\setting\views.py:59 .\templates\setting\service_delivery.html:29
+#: .\templates\setting\service_delivery.html:85
+msgid "textheader-description"
+msgstr "Description"
+
+#: .\setting\views.py:60 .\templates\setting\service_delivery.html:30
+msgid "textheader-action"
+msgstr "Actions"
+
+#: .\setting\views.py:61 .\templates\setting\service_delivery.html:68
+msgid "text-add-service"
+msgstr "Add Service delivery"
+
+#: .\setting\views.py:62 .\templates\setting\service_delivery.html:75
+msgid "text-delivery-service"
+msgstr "Service delivery office"
+
+#: .\setting\views.py:63 .\templates\setting\service_delivery.html:92
+msgid "text-select-region"
+msgstr "Select Region"
+
+#: .\setting\views.py:64 .\templates\setting\partials\zone.html:3
+msgid "text-select-zone"
+msgstr "Select Zone"
+
+#: .\setting\views.py:65 .\templates\setting\partials\woreda.html:3
+msgid "text-select-woreda"
+msgstr "Select Woreda"
+
+#: .\setting\views.py:66 .\templates\setting\service_delivery.html:112
+msgid "text-cancel"
+msgstr "Cancel"
+
+#: .\setting\views.py:67 .\templates\setting\service_delivery.html:113
+msgid "text-add"
+msgstr "Add"
+
+#: .\shengo\settings.py:173
+msgid "English"
+msgstr ""
+
+#: .\shengo\settings.py:174
+msgid "Amharic"
+msgstr ""
+
+#: .\templates\base.html:18 .\templates\base.html:20 .\templates\base2.html:17
+#: .\templates\base2.html:19 .\templates\base2.html:72 .\users\views.py:27
+msgid "title"
+msgstr "Document authentication and Registration service    "
+
+#: .\templates\base2.html:32 .\users\views.py:29
+msgid "home-nav"
+msgstr "Home"
+
+#: .\templates\base2.html:33 .\users\views.py:30
+msgid "about-nave"
+msgstr "About"
+
+#: .\templates\base2.html:34 .\users\views.py:34
+msgid "contact-nav"
+msgstr "Contact"
+
+#: .\templates\base2.html:40 .\users\views.py:35
+msgid "language"
+msgstr "Language"
+
+#: .\templates\base2.html:58 .\users\views.py:33
+msgid "profile-nav"
+msgstr "Profile"
+
+#: .\templates\base2.html:59 .\users\views.py:36
+msgid "log-out"
+msgstr "Logout"
+
+#: .\templates\base2.html:61 .\templates\users\login.html:10
+#: .\templates\users\login.html:15 .\templates\users\register.html:20
+#: .\users\views.py:31
+msgid "login-nav"
+msgstr "Login"
+
+#: .\templates\base2.html:62 .\users\views.py:32
+msgid "register-nav"
+msgstr "Register"
+
+#: .\templates\base2.html:73 .\users\views.py:28
+msgid "welcome"
+msgstr ""
+"Welcome To Federal Document Authentication And Registration Service System!"
+
+#: .\templates\dashboard\includes\sidebar.html:13 .\users\views.py:42
+msgid "sidebar-sales"
+msgstr "Sales"
+
+#: .\templates\dashboard\includes\sidebar.html:21 .\users\views.py:43 
+msgid "sidebar-gifts"
+msgstr "Gift"
+
+#: .\templates\users\login.html:19 .\templates\users\register.html:20
+#: .\users\views.py:37
+msgid "Have-A"
+msgstr "Have you an account ?"
+
+#: .\templates\users\login.html:19 .\templates\users\register.html:10
+#: .\templates\users\register.html:16 .\users\views.py:38
+msgid "sign-Here"
+msgstr "Signup Here"
+
+#: .\templates\users\login.html:20 .\users\views.py:39
+msgid "pwd-Reset"
+msgstr "Password reset"
+
+#: .\users\views.py:40
+#, fuzzy
+#| msgid "sign-Here"
+msgid "sign"
+msgstr "Signup Here"
+
+#: .\users\views.py:41
+msgid "already-have"
+msgstr "Aready have account ?" 

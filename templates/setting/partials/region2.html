@@ -1,0 +1,6 @@
+<select class="custom-select mb-4" name="nationality">
+    <option selected>--------Select Region-------------</option>
+    {% for r in reg_service %}
+    <option value="{{r.pk}}">{{ r.name }}</option>
+    {% endfor %}
+</select>

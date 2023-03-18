@@ -1,0 +1,57 @@
+
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Nationality lists</h5>
+                    <div class="table-responsive">
+                        <table id="zero_config" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Nationality Name</th>
+                                    <th>Actions</th> 
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for n in nations %}
+                            <tr>
+                                <td>{{n.name}}</td>
+                                <td>
+                                    <a href="#editEmployeeModal-{{forloop.counter}}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                    <a href="#deleteEmployeeModal-{{forloop.counter}}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                </td>
+                                
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                            
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <select class="custom-select mb-4" name="nation" hx-get="{% url 'regs' %}" hx-trigger='change' hx-target='#regs'>
+            <option selected>Open this menu</option>
+            {% for n in nations %}
+            <option value="{{n.pk}}">{{ n.name }}</option>
+            {% endfor %}
+        </select>
+        
+        <div id="regs">
+            {% include 'setting/partials/region.html' %}
+        </div>
+
+
+        
+    </div>
+</div>
+
+{% endblock content %}

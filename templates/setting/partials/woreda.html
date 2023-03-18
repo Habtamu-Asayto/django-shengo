@@ -1,0 +1,7 @@
+{% load i18n %}
+<select class="custom-select mb-4" name="wored" id="id_woreda">
+    <option selected>--------{% translate "text-select-woreda" %}-------------</option>
+    {% for r in woreda %}
+        <option value="{{r.pk}}">{{ r.name }}</option>
+    {% endfor %}
+</select>
